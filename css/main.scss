@@ -1,0 +1,159 @@
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+//### Neutral
+
+$Almost_White: hsl(0, 0%, 98%);
+$Medium_Gray: hsl(0, 0%, 41%);
+$Almost_Black: hsl(0, 0%, 8%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size_paragraph: 1.8rem;
+$font_family_epilogue: 'Epilogue', sans-serif;
+//### Font
+
+//- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
+//- Weights: 500, 700
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@mixin img($w, $h, $url) {
+    display: block;
+    width: $w;
+    height: $h;
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+body {
+
+    font-size: $Font_size_paragraph;
+    font-family: $font_family_epilogue;
+    height: 100vh;
+ 
+}
+
+header {
+    max-width: 375px;
+    margin: auto;
+    nav {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+
+        .logo {
+            @include img(70px, 70px, "../images/logo.svg");
+
+        }
+
+        .menu-ico {
+            @include img(25px, 25px, "../images/icon-menu.svg");
+        }
+    }
+}
+
+main {
+    max-width: 375px;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    .sect--picture {
+        picture {
+            width: 375px;
+
+            img {
+                width: 100%;
+                height: auto;
+
+            }
+        }
+    }
+
+    .sect--description-hero {
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+        align-items: center;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $Medium_Gray;
+            line-height: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: $Almost_Black;
+            border-radius: 10px;
+            border: none;
+            color: $Almost_White;
+            font-weight: 700;
+            border: 1px solid $Almost_Black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $Almost_White;
+                color: $Almost_Black;
+                border: 1px solid $Almost_Black;
+            }
+        }
+
+        .partner--group {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: 70px;
+            .partner1 {
+                @include img(65px, 65px, "../images/client-databiz.svg")
+            }
+
+            .partner2 {
+                @include img(65px, 65px, "../images/client-audiophile.svg")
+            }
+
+            .partner3 {
+                @include img(65px, 65px, "../images/client-meet.svg")
+            }
+
+            .partner4 {
+                @include img(65px, 65px, "../images/client-maker.svg")
+            }
+        }
+
+    }
+}
