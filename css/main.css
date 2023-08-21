@@ -13,9 +13,20 @@ body {
   font-family: "Epilogue", sans-serif;
   height: 100vh;
 }
+body .capa {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 8%);
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
 
 header {
   max-width: 375px;
+  min-width: 350px;
   margin: auto;
 }
 header nav {
@@ -25,6 +36,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  position: relative;
 }
 header nav .logo {
   display: block;
@@ -46,6 +58,174 @@ header nav .menu-ico {
   background-size: contain;
   cursor: pointer;
 }
+header nav .nav-left {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  background-color: hsl(0, 0%, 98%);
+  height: 100vh;
+  width: 67%;
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 41%);
+  transform: translateX(260px);
+}
+header nav .nav-left .div_close {
+  width: 100%;
+  text-align: right;
+}
+header nav .nav-left .div_close .ico_menu_close {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/icon-close-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list {
+  height: 70%;
+}
+header nav .nav-left .div_list .ul_div_list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+header nav .nav-left .div_list .ul_div_list li {
+  list-style: none;
+  cursor: pointer;
+}
+header nav .nav-left .div_list .ul_div_list .features ul, header nav .nav-left .div_list .ul_div_list .li_company ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+}
+header nav .nav-left .div_list .ul_div_list .features ul li, header nav .nav-left .div_list .ul_div_list .li_company ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header nav .nav-left .div_list .ul_div_list .features .drop_features, header nav .nav-left .div_list .ul_div_list .li_company .drop_features {
+  display: none;
+}
+header nav .nav-left .div_list .ul_div_list .features .drop_features .todo_list, header nav .nav-left .div_list .ul_div_list .li_company .drop_features .todo_list {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/icon-todo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list .ul_div_list .features .drop_features .calendar, header nav .nav-left .div_list .ul_div_list .li_company .drop_features .calendar {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/icon-calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list .ul_div_list .features .drop_features .reminders, header nav .nav-left .div_list .ul_div_list .li_company .drop_features .reminders {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/icon-reminders.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list .ul_div_list .features .drop_features .planning, header nav .nav-left .div_list .ul_div_list .li_company .drop_features .planning {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/icon-planning.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list .ul_div_list .features .show_features, header nav .nav-left .div_list .ul_div_list .li_company .show_features {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+header nav .nav-left .div_list .ul_div_list .li_company .drop_company {
+  display: none;
+}
+header nav .nav-left .div_list .ul_div_list .li_company .show_company {
+  display: flex;
+  transition: all 0.2s ease-out;
+}
+header nav .nav-left .div_list .arrow {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+}
+header nav .nav-left .div_list .arrow_up {
+  transform: rotate(180deg);
+}
+header nav .nav-left .log_reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav .nav-left .log_reg span a {
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+header nav .nav-left .log_reg button {
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(0, 0%, 8%);
+  padding: 10px 0px;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 41%);
+  font-weight: 700;
+  margin-top: 12px;
+}
+header nav .nav-left .log_reg button:active {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+}
+header nav .show_nav {
+  display: block;
+  transform: translateX(0);
+  z-index: 8;
+  transition: all ease-in 0.3s;
+}
+header nav .quit_nav {
+  transition: all ease-in 0.3s;
+  transform: translateX(260px);
+  display: none;
+}
+
+.input {
+  display: none;
+}
 
 main {
   max-width: 375px;
@@ -54,6 +234,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   margin: auto;
+  min-width: 350px;
 }
 main .sect--picture picture {
   width: 375px;
@@ -141,4 +322,152 @@ main .sect--description-hero .partner--group .partner4 {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  header {
+    max-width: none;
+  }
+  header nav {
+    display: flex;
+    padding-bottom: 15px;
+    height: 80px;
+    position: relative;
+  }
+  header nav .menu-ico {
+    display: none;
+    visibility: hidden;
+  }
+  header nav .nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: static;
+    width: 100%;
+    padding-left: 30px;
+    transform: none;
+    background-color: white;
+  }
+  header nav .nav-left .div_close {
+    display: none;
+  }
+  header nav .nav-left .div_list .ul_div_list {
+    flex-direction: row;
+  }
+  header nav .nav-left .div_list .ul_div_list li:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  header nav .nav-left .div_list .ul_div_list .features, header nav .nav-left .div_list .ul_div_list .li_company {
+    position: relative;
+  }
+  header nav .nav-left .div_list .ul_div_list .features .drop_features, header nav .nav-left .div_list .ul_div_list .li_company .drop_features {
+    position: absolute;
+    padding: 30px 15px;
+    border-radius: 10px;
+    width: 150px;
+    right: 0;
+    background-color: white;
+    box-shadow: 1px 2px 16px -10px hsl(0, 0%, 8%);
+  }
+  header nav .nav-left .div_list .ul_div_list .li_company .drop_company {
+    position: absolute;
+    padding: 30px 15px;
+    border-radius: 10px;
+    width: 150px;
+    right: 0;
+    background-color: white;
+    box-shadow: 1px 2px 16px -10px hsl(0, 0%, 8%);
+  }
+  header nav .nav-left .log_reg {
+    width: 200px;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+  header nav .nav-left .log_reg span a:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  header nav .nav-left .log_reg button {
+    margin: 0;
+    cursor: pointer;
+  }
+  header nav .nav-left .log_reg button:hover {
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+  }
+  main {
+    max-width: none;
+    padding: 0px 10%;
+    flex-direction: row-reverse;
+    height: auto;
+  }
+  main .sect--picture picture img {
+    width: 500px;
+  }
+  main .sect--description-hero {
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 150px;
+    justify-content: space-between;
+  }
+  main .sect--description-hero .hero--text h1 {
+    font-size: 9rem;
+    margin-top: 100px;
+  }
+  main .sect--description-hero .hero--text p {
+    width: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 30px;
+  }
+  main .sect--description-hero .hero--text button {
+    width: 150px;
+    padding: 15px 0px;
+  }
+  main .sect--description-hero .partner--group {
+    margin: 0;
+    justify-content: space-around;
+  }
+  main .sect--description-hero .partner--group .partner1 {
+    display: block;
+    width: 95px;
+    height: 95px;
+    background-image: url("../images/client-databiz.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  main .sect--description-hero .partner--group .partner2 {
+    display: block;
+    width: 95px;
+    height: 95px;
+    background-image: url("../images/client-audiophile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  main .sect--description-hero .partner--group .partner3 {
+    display: block;
+    width: 95px;
+    height: 95px;
+    background-image: url("../images/client-meet.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  main .sect--description-hero .partner--group .partner4 {
+    display: block;
+    width: 95px;
+    height: 95px;
+    background-image: url("../images/client-maker.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=main.css.map */

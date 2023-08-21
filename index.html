@@ -16,6 +16,38 @@
         <nav>
             <span class="logo"></span>
             <span class="menu-ico"></span>
+            <div class="nav-left">
+                <div class="div_close">
+                    <span class="ico_menu_close"></span>
+                </div>
+                <div class="div_list">
+                    <ul class="ul_div_list"> 
+                        <li class="features"><label for="check-features" id="drop_f">Features <span class="arrow" id="span1"></span>  </label>
+                            <ul class="drop_features">
+                                <li> <span class="todo_list"></span>Todo List</li>
+                                <li> <span class="calendar"></span>Calendar</li>
+                                <li> <span class="reminders"></span>Reminders</li>
+                                <li> <span class="planning"></span>Planning</li>
+                            </ul>
+                        </li>
+                        <li class="li_company"> <label  for="check-company" id="drop_c">Company <span class="arrow" id="span2"></span></label> 
+                            <ul class="drop_company">
+                                <li>History</li>
+                                <li>Our Team</li>
+                                <li>Blog</li>
+                            </ul>
+                        </li>
+                        <li>Carrers</li>
+                        <li>About</li>
+
+                    </ul>
+                </div>
+                <div class="log_reg">
+                    <span> <a href=""> Login</a></span>
+                    <button>Register</button>
+                </div>
+
+            </div>
         </nav>
     </header>
     <main>
@@ -27,10 +59,12 @@
             </picture>
         </section>
         <section class="sect--description-hero">
+           <div class="hero--text">
             <h1>Make remote work</h1>
             <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
                 productivity soar.</p>
             <button>Learn more</button>
+           </div>
             <div class="partner--group">
                 <span class="partner1"></span>
                 <span class="partner2"></span>
@@ -41,8 +75,12 @@
 
     </main>
 
-
-
+    <div class="input">
+        <input type="checkbox" id="check-features">
+        <input type="checkbox" id="check-company">
+    </div>
+<div id="capa" ></div>
+<script src="./script.js"></script>
 </body>
 
 </html>
